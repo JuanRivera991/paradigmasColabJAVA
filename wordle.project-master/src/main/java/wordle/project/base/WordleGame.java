@@ -160,8 +160,9 @@ public class WordleGame implements ActionListener {
 	}
         //Obtener palabra de la lista de palabras predeterminadas.
 	public String getWordleString() {
-		Path path = Paths.get("..\\\\wordle.project\\\\assets\\\\Words.txt");
-		List<String> wordList = new ArrayList<String>();
+                //Se debe colocar la ruta de donde se tenga almacenado el archivo
+                Path path = Paths.get("..\\wordle.project-master\\assets\\Words.txt");
+                List<String> wordList = new ArrayList<String>();
 		try {
 			wordList = Files.readAllLines(path);
 		} catch (IOException e) {
